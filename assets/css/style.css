@@ -27,12 +27,20 @@ header {
 
 header h1 {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 40px;
     color: white;
-    margin: 0;
+    margin: 0 0 0 -50px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-decoration: none;
+    background-color: var(--secondary-color);
+    padding: 25px 10px 10px 10px;
+    width: 500px;
+    height: 100px;
+    text-align: right;
+    vertical-align: middle;
+    size: relative;
 }
+
 
 header a {
     text-decoration: none;
@@ -40,7 +48,7 @@ header a {
 }
 
 header nav {
-    margin: 7px 0;
+    margin: 30px 0;
 }
 
 header nav ul {
@@ -64,8 +72,8 @@ header nav ul li a:hover {
     text-shadow: none;
 }
 
-.primary-border {
-    border-color: var(--secondary-color)
+.profile-picture {
+    width: 20%;
 }
 
 section {
@@ -76,19 +84,13 @@ section {
     font-size: 40px;
     color: var(--secondary-color);
     text-align: right;
-    margin: 0 70px auto auto;
     width: 100%;
-    flex: 1;
-}
-
-.profile-picture {
-    display: block;
-    flex-wrap: wrap;
-    width: 20%;
+    flex: 20%;
+    padding: 0 10px 0 0;
 }
 
 .content {
-    flex: 4;
+    flex: 80%;
     padding: 0 0 0 40px;
     border-left: 3px solid;
 }
@@ -107,38 +109,269 @@ section {
     background-color: var(--tertiary-color);
 }
 
-.work {
+.content-work {
+    flex: 80%;
+    padding: 0 20px 0 40px;
+    border-left: 3px solid;
+}
+
+.works {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
+    margin: 0;
     background-color: var(--tertiary-color);
+    text-align: center;
+}
+
+.first-application {
+    margin: 0px;
+    flex: 2;
+    width: 100%;
+    border: 5px solid var(--secondary-color);
+    position: relative;
 
 }
+
+.first-application img{
+    width:100%;
+}
+
+.first-application .image-tag {
+    position: absolute;
+    bottom: 50px;
+    background: var(--secondary-color);
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.first-application:hover .overlay{
+    opacity: 0.2;
+}
+
+.overlay {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: darkgoldenrod;
+    transition: 0.5s ease;
+}
+
+.work-packages {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.applications {
+    flex: 1 600px;
+    width: 50%;
+    border: 5px solid var(--secondary-color);
+    position:relative;
+
+}
+
+.ledwall {
+    margin: 20px 10px 0 0;
+}
+
+.calculator {
+    margin: 20px 0 0 10px;
+}
+
+.pastel {
+    margin: 20px 10px 0 0;
+}
+
+.runbuddy {
+    margin: 20px 0 0 10px;
+}
+
+.applications:hover .overlay{
+    opacity: 0.2;
+}
+
+.applications img {
+    width: 100%;
+}
+
+.image-hover:hover {
+    color:rgba(0, 0, 0, 0.5)
+}
+
+
+.applications .image-tag {
+    position: absolute;
+    bottom: 50px;
+    background: var(--secondary-color);
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+}
+
+.image-tag h3 {
+    font-size: 30px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.image-tag p {
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+    text-align: left;
+}
+
+.section-title-contact {
+    font-size: 30px;
+    color: var(--secondary-color);
+    text-align: right;
+    width: 100%;
+    flex: 20%;
+    padding: 0 10px 0 0;
+}
+
 
 .contact-me {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
+    margin: 0;
     background-color: var(--tertiary-color);
+}
 
+.content-contact {
+    flex: 80%;
+    padding: 0 0 0 40px;
+    border-left: 3px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .flex-row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
 }
 
 .contact-info {
-    flex: block;
-    display: flex;
+    flex: 1;
     font-weight: 600;
+    text-align: center;
 }
 
 .contact-info a {
     text-decoration: none;
     color: var(--primary-color)
+}
+
+@media screen and (max-width: 980px) {
+    header {
+        padding bottom:0 ;
+        justify-content: center;
+    }
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+
+    header nav ul {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+
+    .section-title {
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .profile-picture {
+        width: 40%;
+    }
+
+    .first-application {
+        flex: 1;
+    }
+
+    .ledwall {
+        margin: 20px 0 0 0;
+    }
+    
+    .calculator {
+        margin: 20px 0 0 0;
+    }
+    
+    .pastel {
+        margin: 20px 0 0 0;
+    }
+    
+    .runbuddy {
+        margin: 20px 0 0 0;
+    }
+
+    .content-contact {
+        flex-direction: column;
+    }
+
+    .section-title-contact {
+        font-size: 25px;
+    }
+
+    .contact-info {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .profile-picture {
+        width: 80%;
+    }
+
+    .content {
+        border: none;
+        padding: 0 0 0 0;
+    }
+
+    .content-work {
+        border: none;
+        padding: 0 0 0 0;
+    }
+
+    .content-contact {
+        border: none;
+        padding: 0 0 0 0;
+    }
+
+    .section-title {
+        text-align: center;
+        border-bottom: var(--primary-color) 3px solid;
+        margin-bottom: 20px;
+        padding: 0 0 0 0;
+    }
+
+    .section-title-contact {
+        text-align: center;
+        border-bottom: var(--primary-color) 3px solid;
+        margin-bottom: 20px;
+        padding: 0 0 0 0;
+    }
+    
+    .hero img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
