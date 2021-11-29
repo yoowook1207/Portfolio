@@ -169,11 +169,10 @@ section {
 }
 
 .applications {
-    flex: 1 600px;
+    flex: 1 700px;
     width: 50%;
     border: 5px solid var(--secondary-color);
-    position:relative;
-
+    position: relative;
 }
 
 .ledwall {
@@ -272,7 +271,7 @@ section {
 
 @media screen and (max-width: 980px) {
     header {
-        padding bottom:0 ;
+        padding bottom: 0;
         justify-content: center;
     }
 
