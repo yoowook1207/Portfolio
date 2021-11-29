@@ -386,3 +386,24 @@ section {
         display :none;
     }
 }
+
+@media screen and (max-width: 540px) {
+    header nav ul{
+        flex: 0 100%;
+        display: block;
+        text-align: center;
+    }
+    header nav ul li{
+        margin-top: 10px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header h1 {
+        font-size: 28px;
+    }
+}
