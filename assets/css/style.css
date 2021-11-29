@@ -373,4 +373,16 @@ section {
         margin-left: auto;
         margin-right: auto;
     }
+
+}
+
+@media screen and (max-width: 574px) {
+
+    .applications .image-tag {
+        display :none;
+    }
+
+    .first-application .image-tag {
+        display :none;
+    }
 }
